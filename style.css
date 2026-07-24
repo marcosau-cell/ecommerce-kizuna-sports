@@ -1,0 +1,111 @@
+:root {
+    --cor-primaria: rgb(50, 216, 216); /* Azul clarinho */
+    --cor-fundo: #f9f9f9; /* Fundo geral da página */
+    --cor-texto: #333333; /* Cor do texto quase preta */
+    --fonte-padrao: 'Arial', sans-serif; /* Fonte simples e universal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao); 
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.cabecalho-principal {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--cor-primaria); 
+    color: #000000;
+    padding: 20px 40px;
+    border-bottom: 2px solid #000000; 
+    
+    /* Mantém o menu fixo no topo */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}    
+
+.menu-navegacao {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.menu-navegacao a {
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-navegacao a:hover {
+    color: #ffffff; 
+}
+
+.secao-banner {
+    width: 100%;
+}
+
+.imagem-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem esticar feio */
+    border-bottom: 2px solid #ccc;
+}
+
+.sessao-vitrine, .secao-texto {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.carrossel-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto; 
+}
+
+.item-da-lista {
+    background-color: #ffffff; 
+    min-width: 220px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px; 
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: box-shadow 0.3s; 
+}
+
+.item-da-lista:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.imagem-produto {
+    width: 100%; 
+    height: 180px;
+    object-fit: contain; 
+    margin-bottom: 12px;
+}
+
+.rodape-site {
+    background-color: #333333; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
